@@ -1,0 +1,31 @@
+<p appColor Color="red" [textContent]="variable"></p>
+<button (click)="theclick($event)">gf</button>
+
+<input #phone placeholder="lol" />
+<button (click)="callPhone(phone.value)">REGARDE</button>
+
+<p [ngClass]="isspecial ? 'special' : 'not_that_special'">je suis une classe ou pas XD</p>
+<p [ngStyle]="myStyles">Kokoron</p>
+
+<div>
+    <p *ngIf="isActif">actif</p>
+</div>
+
+<div *ngFor="let caracteres of band">
+    <p>{{caracteres.name | transport:'o':'😂'}}</p>
+</div>
+
+
+
+<button (click)="changeRandomMyValue()">REGARDE</button>
+<div [ngSwitch]="myValue">
+    <p *ngSwitchCase=1>Value1</p>
+    <p *ngSwitchCase=2>Value2</p>
+    <p *ngSwitchCase=3>Value3</p>
+    <p *ngSwitchCase=4>Value4</p>
+    <p *ngSwitchDefault>Default</p>
+</div>
+<input #truc (keyUp.enter)='changeprice(truc.value)' />
+<p>{{getObj()}}</p>
+<p>{{gettotaltalprice()}}</p>
+<p>{{getFacture()}}</p>
